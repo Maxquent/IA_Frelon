@@ -1,0 +1,10 @@
+services:
+  video-to-images:
+    build: .
+    container_name: video-to-images
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app/static/uploads:/app/static/uploads
+      - ./app/static/images:/app/static/images
+      - ./app/static/zips:/app/static/zips
